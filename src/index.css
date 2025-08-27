@@ -8,17 +8,20 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
 
+  --color-linkedin: #0077B5; 
+  --color-github: #211F1F; 
+  --color-resume: #AB1020;
+
   --color-card: hsl(var(--card));
   
   --animate-float: float 6s ease-in-out infinite; 
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite; 
   --animate-fade-in: fade-in 0.7s ease-out forwards;
   --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
-  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.4s forwards;
-  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.6s forwards;
-  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.8s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
+  --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   --animate-meteor: meteor 5s linear infinite; 
-
 }
 
 @keyframes float {
@@ -65,18 +68,6 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%; 
-
-    --card: 0 0% 100%; 
-
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
-
-    --border: 214 32% 91%; 
-  }
-
-  .dark {
     --background: 222 47% 4%;
     --foreground: 213 31% 91%; 
 
@@ -102,6 +93,7 @@
   }
 }
 
+/* utility classes directly in CSS (Tailwind v4) */
 @utility container {
   margin-inline: auto; 
   padding-inline: 2rem; 
@@ -123,9 +115,33 @@
   }
 }
 
+@utility resume-gradient {
+  @apply text-primary-foreground; 
+  background-image: linear-gradient(135deg, var(--color-resume) 0%, #5F0711 100%);
+}
+
+@utility linkedin-gradient {
+  @apply text-primary-foreground; 
+  background-image: linear-gradient(135deg, var(--color-linkedin) 0%, #033D5C 100%);
+}
+
+@utility github-gradient {
+  @apply text-primary-foreground; 
+  background-image: linear-gradient(135deg, var(--color-github) 0%, #1A1515 100%);
+}
+
 @utility text-glow {
   @apply relative; {/* @apply is used to add existing tailwind styles to the class */}
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5); 
+}
+
+@utility card-glow {
+  @apply relative;
+  box-shadow: 0 0 40px #B648FF; 
+}
+
+@utility button-hover {
+  @apply transition-transform hover:scale-[1.06] hover:shadow-lg; 
 }
 
 @utility card-hover {

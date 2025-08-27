@@ -1,13 +1,14 @@
-import { ThemeToggle } from "../components/ThemeToggle";
 import { SpaceBackground } from "../components/SpaceBackground";
 import { Navbar } from "../components/Navbar";
+import { HomeSection } from "../components/HomeSection";
+import { AboutSection } from "../components/AboutSection";
+import { SkillsSection } from "../components/SkillsSection";
+import { ProjectsSection } from "../components/ProjectsSection";
+import { ContactSection } from "../components/ContactSection";
 
 export const Home = () => {
     return (
       <div className="min-h-dvh bg-background text-foreground overflow-x-hidden"> 
-        {/* Theme Toggle */}
-        <ThemeToggle />
-
         {/* Background Effects */}
         <SpaceBackground />
 
@@ -16,7 +17,11 @@ export const Home = () => {
 
         {/* Main Content */}
         <main>
-          {/* TODO */}
+          <HomeSection />
+          <AboutSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <ContactSection />
         </main>
 
         {/* Footer */}
