@@ -50,7 +50,7 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <SectionFade animate="animate-fade-in-down" threshold={0.7}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+          <h2 className="font[Poppins] text-4xl md:text-5xl font-semibold mb-6 text-center">
             Featured <span className="text-primary"> Projects</span>
           </h2>
 
@@ -91,7 +91,7 @@ export const ProjectsSection = () => {
                 
                   <a href={project.githubURL} 
                     target="_blank" 
-                    className="github-gradient rounded-full w-11 h-11 inline-flex justify-center items-center absolute bottom-5 right-31 text-foreground/80 hover:text-primary transition-colors duration-300"
+                    className="github-gradient rounded-full mt-auto mx-auto w-11 h-11 inline-flex justify-center justify-self-center items-center text-foreground/80 hover:text-primary transition-colors duration-300"
                   > 
                     <Github size={30} />
                   </a>

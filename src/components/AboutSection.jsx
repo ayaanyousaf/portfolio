@@ -6,14 +6,14 @@ export const AboutSection = () => {
         <section id="about" className="py-24 px-4 relative">
           <div className="container mx-auto max-w-5xl">
             <SectionFade animate="animate-fade-in-down" threshold={0.7}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+              <h2 className="font-[Poppins] text-4xl md:text-5xl font-semibold mb-12 text-center">
                 About <span className="text-primary"> Me</span>
               </h2>
             </SectionFade>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <SectionFade animate="animate-fade-in-right" threshold={0.5}>
-                <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-18 items-center">
+              <SectionFade animate="animate-fade-in-right" threshold={0.5} className="order-2 md:order-1">
+                <div className="font-[Poppins] md:w-lg space-y-6">
 
                   <p className="flex items-start text-lg text-muted-foreground">
                     <span className="shrink-0 pr-2 text-2xl">👨🏽‍💻</span>
@@ -42,10 +42,10 @@ export const AboutSection = () => {
                   </div>
                 </div>
               </SectionFade>
-              <SectionFade animate="animate-fade-in-left" threshold={0.5}>
+              <SectionFade animate="animate-fade-in-left" threshold={0.5} className="order-1 md:order-2">
                 <div className="grid grid-cols-1 gap-6">
-                  <div className="card-glow w-80 h-80 mb-2 rounded-full overflow-hidden mx-auto">
-                    <img src="../../public/selfie.jpg" className="w-full h-full object-cover"/>
+                  <div className="card-glow h-55 w-55 md:w-80 md:h-80 md:mb-2 rounded-full overflow-hidden mx-auto">
+                    <img src="/selfie.jpg" className="w-full h-full object-cover"/>
                   </div>
                   <div className="justify-self-center p-6">
                     <div className="grid grid-cols-2 items-center justify-center gap-4">
@@ -63,7 +63,7 @@ export const AboutSection = () => {
                         <Github className="mr-1" size={20} /> GitHub
                       </a>
 
-                      <a href="../../public/AyaanYousaf_Resume.pdf" 
+                      <a href="/AyaanYousaf_Resume.pdf" 
                           target="_blank"
                           className="col-span-2 flex justify-center justify-self-center items-center resume-gradient button-hover block rounded-lg p-4 w-30 text-sm font-semibold"
                       >

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap'); 
 @import "tailwindcss"; 
 
 @theme {
@@ -30,6 +32,17 @@
   --animate-fade-in-up-delay-5: fade-in-up 0.7s ease-out 1.0s forwards; 
 
   --animate-meteor: meteor 5s linear infinite; 
+}
+
+@keyframes wave {
+   0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); } /* settle back */
+  100% { transform: rotate(0deg); }
 }
 
 @keyframes float {
@@ -192,6 +205,11 @@
   background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
   background-clip: padding-box; 
   border: 1px solid transparent; 
+}
+
+@utility wave {
+  animation: wave 2s infinite; 
+  transform-origin: 70% 70%; 
 }
 
 @utility cosmic-button {

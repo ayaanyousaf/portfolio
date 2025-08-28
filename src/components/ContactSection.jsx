@@ -42,7 +42,7 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <SectionFade animate="animate-fade-in-down" threshold={0.7}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="font-[Poppins] text-4xl md:text-5xl font-semibold mb-4">
             Get In <span className="text-primary"> Touch</span>
           </h2>
 
@@ -109,7 +109,7 @@ export const ContactSection = () => {
           </SectionFade>
 
           <SectionFade animate="animate-fade-in-left" threshold={0.5}>
-            <div className="bg-card p-8 w-lg rounded-lg shadow-xs">
+            <div className="bg-card p-8 rounded-lg shadow-xs">
               <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
               <form ref={form} onSubmit={sendEmail} className="text-left space-y-6">
@@ -143,8 +143,8 @@ export const ContactSection = () => {
                     id="message" 
                     name="message" 
                     required
-                    className="w-full px-4 py-3 h-50 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
-                    placeholder="Hi Ayaan, love the website! I'd love to chat about a new opportunity you may be interested in! " 
+                    className="w-full px-4 py-3 md:h-50 h-40 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                    placeholder="Hi Ayaan, I'd love to chat about a new opportunity you may be interested in!" 
                   />
                 </div>
                 <button type="submit" className={cn(

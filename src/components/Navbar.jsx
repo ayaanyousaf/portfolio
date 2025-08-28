@@ -25,15 +25,16 @@ export const Navbar = () => {
     }, []); 
 
     return (
+      <>
         <nav 
-          className={cn("fixed w-full z-40 transition-all duration-300",
+          className={cn("fixed w-full z-50 transition-all duration-300",
             isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
           )}
         >
-          <div className="container flex items-center justify-between">
-            <a className="text-xl font-bold text-primary flex items-center" href="#home">
+          <div className="px-10 container flex items-center justify-between">
+            <a className="text-3xl font-semibold  text-primary flex items-center" href="#home">
               <img src="/AyaanYousaf.png" className="mr-3 w-12 h-12 rounded-full"/>
-              <span className="relative z-10">
+              <span className="font-[Allura] relative z-10">
                 <span className="text-glow text-foreground"> Ayaan </span> Yousaf
               </span>
             </a>
@@ -51,7 +52,6 @@ export const Navbar = () => {
               ))}
             </div>
 
-
             {/* Mobile Navbar */}
             <button onClick={() => setIsMenuOpen((prev) => !prev)} 
                     className="md:hidden p-2 text-foreground z-50"
@@ -59,27 +59,27 @@ export const Navbar = () => {
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-
-            <div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center", 
-                               "transition-all duration-300 md:hidden",
-                               isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                           )}
-            >
-              <div className="flex flex-col space-y-8 text-xl">
-                {navItems.map((item, key) => (
-                    <a 
-                      key={key} 
-                      href={item.href} 
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.name}
-                    </a>
-                ))}
-              </div>
-            </div>
           </div>
-             
         </nav>
+
+        <div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center", 
+                            "transition-all duration-300 md:hidden",
+                            isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                        )}
+        >
+          <div className="flex flex-col space-y-8 text-xl">
+            {navItems.map((item, key) => (
+              <a 
+                key={key} 
+                href={item.href} 
+                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </>
     )
 }

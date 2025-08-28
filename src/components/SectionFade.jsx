@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react"
 // children: everything wrapped inside tag
 // animate: specific Tailwind CSS animation 
 // threshold: % visibility at which to trigger animation
-export const SectionFade = ({ children, animate, threshold }) => {
+export const SectionFade = ({ children, animate, threshold, className }) => {
     const [isVisible, setIsVisible] = useState(false); 
     const ref = useRef(null); 
 
@@ -28,7 +28,7 @@ export const SectionFade = ({ children, animate, threshold }) => {
     return (
       <div
         ref={ref}
-        className={`${isVisible ? animate : "opacity-0"}  transition-opacity duration-700`}
+        className={`${isVisible ? animate : "opacity-0"}  transition-opacity duration-700 ${className}`}
       >
         {children}
       </div>
