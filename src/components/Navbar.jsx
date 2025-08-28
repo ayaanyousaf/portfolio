@@ -16,7 +16,7 @@ export const Navbar = () => {
 
     useEffect(() => {
       const handleScroll = () => {
-        setIsScrolled(window.screenY > 10)
+        setIsScrolled(window.scrollY > 10)
       }
 
       window.addEventListener("scroll", handleScroll)
@@ -32,6 +32,7 @@ export const Navbar = () => {
         >
           <div className="container flex items-center justify-between">
             <a className="text-xl font-bold text-primary flex items-center" href="#home">
+              <img src="/AyaanYousaf.png" className="mr-3 w-12 h-12 rounded-full"/>
               <span className="relative z-10">
                 <span className="text-glow text-foreground"> Ayaan </span> Yousaf
               </span>
