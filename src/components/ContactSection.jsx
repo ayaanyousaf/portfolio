@@ -52,7 +52,7 @@ export const ContactSection = () => {
         </SectionFade>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <SectionFade animate="animate-fade-in-right" threshold={0.5}>
+          <SectionFade animate="animate-fade-in-right-slow" threshold={0.5}>
             <div className="space-y-8">
               <h3 className="text-2xl font-semibold mb-6"> Contact Information</h3>
 
@@ -108,7 +108,7 @@ export const ContactSection = () => {
             </div>
           </SectionFade>
 
-          <SectionFade animate="animate-fade-in-left" threshold={0.5}>
+          <SectionFade animate="animate-fade-in-left-slow" threshold={0.5}>
             <div className="bg-card p-8 rounded-lg shadow-xs">
               <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 

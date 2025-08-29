@@ -35,8 +35,8 @@ export const AboutSection = () => {
                     <span className="flex-1 text-left">I combine languages and frameworks to design, build, and iterate on impactful software.</span>
                   </p> 
 
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                    <a href="#contact" className="cosmic-button">
+                  <div className="flex flex-col w-fit justify-self-center sm:flex-row gap-4 pt-4 justify-center">
+                    <a href="#contact" className="transparent-button">
                       Get In Touch
                     </a>
                   </div>
@@ -44,7 +44,7 @@ export const AboutSection = () => {
               </SectionFade>
               <SectionFade animate="animate-fade-in-left" threshold={0.5} className="order-1 md:order-2">
                 <div className="grid grid-cols-1 gap-6">
-                  <div className="card-glow h-55 w-55 md:w-80 md:h-80 md:mb-2 rounded-full overflow-hidden mx-auto">
+                  <div className="image-glow h-55 w-55 md:w-80 md:h-80 md:mb-2 rounded-full overflow-hidden mx-auto">
                     <img src="/selfie.jpg" className="w-full h-full object-cover"/>
                   </div>
                   <div className="justify-self-center p-6">

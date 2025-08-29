@@ -61,8 +61,8 @@ export const SkillsSection = () => {
 
             <div className="flex flex-wrap gap-4 justify-center">  {/* skill hex */}
               {filteredSkills.map((skill, key) => (
-                <SectionFade animate="animate-fade-in-up" threshold={0.3}>  
-                  <div key={key} className="px-6 flex flex-col justify-center items-center overflow-hidden rounded-xl h-20 w-20 md:h-40 md:w-40 bg-primary/20 p-2 shadow-xs card-hover hover:card-glow active:card-hover active:card-glow"> 
+                <SectionFade animate="animate-fade-in-up" threshold={0.7}>  
+                  <div key={key} className="px-6 flex flex-col justify-center items-center overflow-hidden rounded-xl h-20 w-20 md:h-40 md:w-40 gradient-border p-2 shadow-xs card-hover hover:card-glow active:card-hover active:card-glow"> 
                     <img src={skill.logo} alt={skill.name} className="mx-auto max-w-10 max-h-10 md:max-w-25 md:max-h-25 justify-self-center" />
                     <h3 className="mt-2 text-primary-foreground text-xs md:text-base text-center font-semibold"> {skill.name} </h3>
                   </div>

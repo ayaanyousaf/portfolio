@@ -28,7 +28,7 @@ export const SectionFade = ({ children, animate, threshold, className }) => {
     return (
       <div
         ref={ref}
-        className={`${isVisible ? animate : "opacity-0"}  transition-opacity duration-700 ${className}`}
+        className={`${isVisible ? animate : "opacity-0"} ${className}`}
       >
         {children}
       </div>

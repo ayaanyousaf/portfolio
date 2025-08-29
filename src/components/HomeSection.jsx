@@ -9,7 +9,7 @@ export const HomeSection = () => {
                 <span className="block md:inline opacity-0 animate-fade-in-up">Hi <span className="inline-flex md:hidden wave">👋</span>, I'm</span>
                 <div className="ml-3 flex gap-2">
                   <span className="md:inline text-primary opacity-0 animate-fade-in-up-delay-1"> Ayaan</span>
-                  <span className="md:inline text-gradient opacity-0 animate-fade-in-up-delay-2"> Yousaf</span>
+                  <span className="md:inline text-primary opacity-0 animate-fade-in-up-delay-2"> Yousaf</span>
                 </div>
                 <span className="hidden md:inline wave">👋</span>
               </h1>
@@ -27,11 +27,12 @@ export const HomeSection = () => {
                   wrapper="span"
                   speed={50}
                   repeat={Infinity}
+                  className="text-primary"
                 />
               </p>
 
               <div className="transition-transform hover:scale-[1.08] pt-4 opacity-0 animate-fade-in-up-delay-4">
-                <a href="#projects" className="cosmic-button">
+                <a href="#projects" className="transparent-button">
                   My Work
                 </a>
               </div>

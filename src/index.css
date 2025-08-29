@@ -19,11 +19,16 @@
   /* Custom animation variables */
   --animate-float: float 6s ease-in-out infinite; 
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite; 
+  --animate-pop-in: pop-in 0.4s ease-out forwards;
 
   --animate-fade-in-up: fade-in-up 0.7s ease-out forwards;
   --animate-fade-in-down: fade-in-down 0.8s ease-out forwards; 
-  --animate-fade-in-right: fade-in-right 1.0s ease-out forwards;
-  --animate-fade-in-left: fade-in-left 1.0s ease-out forwards;
+  --animate-fade-in-right: fade-in-right 0.5s ease-out forwards;
+  --animate-fade-in-left: fade-in-left 0.5s ease-out forwards;
+
+  --animate-fade-in-right-slow: fade-in-right 0.8s ease-out forwards;
+  --animate-fade-in-left-slow: fade-in-left 0.8s ease-out forwards;
+
 
   --animate-fade-in-up-delay-1: fade-in-up 0.7s ease-out 0.2s forwards;
   --animate-fade-in-up-delay-2: fade-in-up 0.7s ease-out 0.4s forwards;
@@ -63,6 +68,20 @@
     opacity: 0.8;
   }
 }
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.10);
+  }
+}
 @keyframes fade-in-up {
   from {
     opacity: 0; 
@@ -76,7 +95,7 @@
 @keyframes fade-in-down {
   from {
     opacity: 0; 
-    transform: translateY(-40px);
+    transform: translateY(-30px);
   }
   to {
     opacity: 1;
@@ -189,6 +208,11 @@
 
 @utility card-glow {
   @apply relative;
+  box-shadow: 0 0 20px #229BF7; 
+}
+
+@utility image-glow {
+  @apply relative;  
   box-shadow: 0 0 30px #229BF7; 
 }
 
@@ -216,6 +240,28 @@
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
          transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
          hover:scale-105 active:scale-95;
+}
+
+@utility transparent-button {
+  @apply border border-primary text-primary hover:bg-primary/10 font-medium
+         transition-all duration-300 hover:scale-[1.06] active:scale-95
+         px-6 py-3 rounded-full hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+}
+
+@utility arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 15px solid hsl(var(--primary));
+}
+
+@utility arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid hsl(var(--primary)); 
 }
 
 @utility star {

@@ -5,8 +5,10 @@ import { cn } from "../lib/utils"
 const navItems = [
     {name: "Home", href: "#home"},
     {name: "About", href: "#about"},
+    {name: "Education", href: "#education"},
     {name: "Skills", href: "#skills"},
     {name: "Projects", href: "#projects"},
+    {name: "Work", href: "#work"},
     {name: "Contact", href: "#contact"},
 ]; 
 
@@ -33,7 +35,7 @@ export const Navbar = () => {
         >
           <div className="px-10 container flex items-center justify-between">
             <a className="text-3xl font-semibold  text-primary flex items-center" href="#home">
-              <img src="/AyaanYousaf.png" className="mr-3 w-12 h-12 rounded-full"/>
+              <img src="/Logo.png" className="mr-3 w-12 h-12 rounded-full"/>
               <span className="font-[Allura] relative z-10">
                 <span className="text-glow text-foreground"> Ayaan </span> Yousaf
               </span>
