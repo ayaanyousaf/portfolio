@@ -34,7 +34,7 @@ export const Navbar = () => {
           )}
         >
           <div className="px-10 container flex items-center justify-between">
-            <a className="text-3xl font-semibold  text-primary flex items-center" href="#home">
+            <a className="text-xl md:text-3xl font-semibold  text-primary flex items-center" href="#home">
               <img src="/Logo.png" className="mr-3 w-12 h-12 rounded-full"/>
               <span className="font-[Allura] relative z-10">
                 <span className="text-glow text-foreground"> Ayaan </span> Yousaf
