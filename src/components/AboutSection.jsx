@@ -36,8 +36,8 @@ export const AboutSection = () => {
                     <span className="flex-1 text-left">Beyond code, I enjoy lifting weights, travelling, and playing video games.</span>
                   </p> 
 
-                  <div className="flex flex-col w-fit justify-self-center sm:flex-row gap-4 pt-4 justify-center">
-                    <a href="#contact" className="transparent-button">
+                  <div className="flex w-full pt-4 justify-center">
+                    <a href="#contact" className="transparent-button inline-flex">
                       Get In Touch
                     </a>
                   </div>
