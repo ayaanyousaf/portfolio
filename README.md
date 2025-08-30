@@ -1,48 +1,27 @@
 # Portfolio Website - Ayaan Yousaf
-### 🌐 [Live Demo](www.ayaanyousaf.ca)
-My personal developer portfolio to showcase projects, skills, experience, and more!
+<img src="public/splash.png" alt="Portfolio Preview" width="600">
+
+## Overview
+A personal developer portfolio to showcase projects, skills, experience, and more! A modern and interactive web application built with React.js, Vite, Tailwind CSS, and Three.js. A stunning 3D space background, responsive design with smooth animations, and an interactive 3D Earth model.
+
+## 🌐 Live Demo
+Check out a live demonstration of the project at [www.ayaanyousaf.ca](https://www.ayaanyousaf.ca)! 
+Deployed using Vercel.
 
 ## 🚀 Features
-- Responsive design (desktop & mobile)  
-- Modern UI styled with Tailwind CSS  
-- 3D space background and planet models made with Three.js
-- Contact form integration with EmailJS (sends directly to my inbox)  
-- Smooth animations & transitions with framer-motion
-- Sections: Home, About, Education, Skills, Projects, Work, Contact
+- Immersive Visuals: Captivate your users with beautiful Three.js 3D visuals. 
+- Dynamic Sections: View all of the content in one scroll, all sections are dynamic with React.js.
+- Responsive Design: Leverages Tailwind CSS to ensure consistent styling on all devices.
+- Smooth Animations: Modern scrolling animations with Framer Motion.
+- Contact Form API: A working contact form with seamless EmailJS integration.
 
 ## 🛠️ Tech Stack
-- **Frontend:** React w/ JavaScript, Vite, Tailwind CSS
-- **Email API:** EmailJS (for contact form backend)  
+- **Core:** React 19, Vite, React Router
+- **Styling & UI:** Tailwind CSS, Lucide React, Radix UI (Toast)
+- **Animations:** Framer Motion, React Type Animation
+- **3D Graphics:** Three.js, @react-three/fiber, @react-three/drei
+- **Integrations:** EmailJS
 - **Deployment:** Vercel
 
-## 📂 Project Structure
-```plaintext
-portfolio/
-├─ public/                # Static assets
-│   ├─ assets/            # images, icons
-│   ├─ textures/          # 3D model textures
-│   └─ projects/          # Project thumbnails/screenshots
-│
-├─ src/
-│   ├─ pages/             # Main pages (Home.jsx is root)
-│   │   ├─ Home.jsx
-│   │   └─ NotFound.jsx
-│   │
-│   ├─ components/        # Reusable components
-│   │   ├─ ui/
-│   │
-│   ├─ lib/              
-│   │   └─ utils.js
-│   │
-│   ├─ hooks/             # Custom React hooks
-│   │  
-│   │
-│   ├─ App.jsx
-│   ├─ main.jsx
-│   └─ index.css          # Global CSS file with Tailwind CSS styling
-│
-├─ eslint.config.js
-├─ index.html
-├─ package-lock.json
-├─ package.json
-└─ vite.config.js
+## 📝 License 
+- This project is open-source and license under the [MIT License](./LICENSE).
