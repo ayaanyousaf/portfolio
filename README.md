@@ -1,8 +1,48 @@
-# Ayaan Yousaf Portfolio
+# Portfolio Website - Ayaan Yousaf
+### 🌐 [Live Demo](www.ayaanyousaf.ca)
+My personal developer portfolio to showcase projects, skills, experience, and more!
 
-#### Welcome to my personal portfolio repository! This repository contains all of the source code for my personal portfolio website, which will soon be deployed at ayaanyousaf.ca. Check out my website to see my skills, interests, projects, and experience, and if you want a great way to get in touch with me.
+## 🚀 Features
+- Responsive design (desktop & mobile)  
+- Modern UI styled with Tailwind CSS  
+- 3D space background and planet models made with Three.js
+- Contact form integration with EmailJS (sends directly to my inbox)  
+- Smooth animations & transitions with framer-motion
+- Sections: Home, About, Education, Skills, Projects, Work, Contact
 
-## Technologies
-##### Frontend: React 19, JavaScript, Tailwind CSS, Vite
-##### Backend: EmailJS for contact form API.
-##### Tools: VS Code, ESLint, Prettier, npm
+## 🛠️ Tech Stack
+- **Frontend:** React w/ JavaScript, Vite, Tailwind CSS
+- **Email API:** EmailJS (for contact form backend)  
+- **Deployment:** Vercel
+
+## 📂 Project Structure
+```plaintext
+portfolio/
+├─ public/                # Static assets
+│   ├─ assets/            # images, icons
+│   ├─ textures/          # 3D model textures
+│   └─ projects/          # Project thumbnails/screenshots
+│
+├─ src/
+│   ├─ pages/             # Main pages (Home.jsx is root)
+│   │   ├─ Home.jsx
+│   │   └─ NotFound.jsx
+│   │
+│   ├─ components/        # Reusable components
+│   │   ├─ ui/
+│   │
+│   ├─ lib/              
+│   │   └─ utils.js
+│   │
+│   ├─ hooks/             # Custom React hooks
+│   │  
+│   │
+│   ├─ App.jsx
+│   ├─ main.jsx
+│   └─ index.css          # Global CSS file with Tailwind CSS styling
+│
+├─ eslint.config.js
+├─ index.html
+├─ package-lock.json
+├─ package.json
+└─ vite.config.js

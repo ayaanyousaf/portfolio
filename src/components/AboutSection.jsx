@@ -1,5 +1,6 @@
 import { FileUser, Github, Linkedin } from "lucide-react"
-import { SectionFade } from "./SectionFade"
+import { SectionFade } from "./ui/SectionFade"
+import SpringFade from "./ui/SpringFade"
 
 export const AboutSection = () => {
     return (
@@ -12,27 +13,27 @@ export const AboutSection = () => {
             </SectionFade>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-18 items-center">
-              <SectionFade animate="animate-fade-in-right" threshold={0.5} className="order-2 md:order-1">
+              <SpringFade direction="right" distance={100} delay={0.2} className="order-2 md:order-1">
                 <div className="font-[Poppins] md:w-lg space-y-6">
 
                   <p className="flex items-start text-lg text-muted-foreground">
                     <span className="shrink-0 pr-2 text-2xl">👨🏽‍💻</span>
-                    <span className="flex-1 text-left">I am a 4th year Computer Science student with a strong passion for software development.</span>
+                    <span className="flex-1 text-left">4th-year Computer Science student passionate about building scalable software that solves real-world problems.</span>
                   </p> 
 
                   <p className="flex items-start text-lg text-muted-foreground">
                     <span className="shrink-0 pr-2 text-2xl">🎓</span>
-                    <span className="flex-1 text-left">Currently pursuing a Bachelor's Degree (Honours) in Computer Science.</span>
+                    <span className="flex-1 text-left">Pursuing a Bachelor's Degree (Honours) in Computer Science.</span>
                   </p> 
 
                   <p className="flex items-start text-lg text-muted-foreground">
                     <span className="shrink-0 pr-2 text-2xl">📝</span>
-                    <span className="flex-1 text-left">I enjoy what I do because of the thrill of solving new problems.</span>
+                    <span className="flex-1 text-left">I enjoy taking on new challenges and continuously learning new frameworks and tools.</span>
                   </p> 
 
                   <p className="flex items-start text-lg text-muted-foreground">
                     <span className="shrink-0 pr-2 text-2xl">🛠️</span>
-                    <span className="flex-1 text-left">I combine languages and frameworks to design, build, and iterate on impactful software.</span>
+                    <span className="flex-1 text-left">Beyond code, I enjoy lifting weights, travelling, and playing video games.</span>
                   </p> 
 
                   <div className="flex flex-col w-fit justify-self-center sm:flex-row gap-4 pt-4 justify-center">
@@ -41,8 +42,8 @@ export const AboutSection = () => {
                     </a>
                   </div>
                 </div>
-              </SectionFade>
-              <SectionFade animate="animate-fade-in-left" threshold={0.5} className="order-1 md:order-2">
+              </SpringFade>
+              <SpringFade direction="left" distance={100} delay={0.2} className="order-1 md:order-2">
                 <div className="grid grid-cols-1 gap-6">
                   <div className="image-glow h-55 w-55 md:w-80 md:h-80 md:mb-2 rounded-full overflow-hidden mx-auto">
                     <img src="/selfie.jpg" className="w-full h-full object-cover"/>
@@ -72,7 +73,7 @@ export const AboutSection = () => {
                     </div>
                   </div>
                 </div>
-              </SectionFade>
+              </SpringFade>
             </div>
           </div>
             

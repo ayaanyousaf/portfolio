@@ -1,5 +1,5 @@
 import { ArrowRight, ExternalLink, Github, Tag } from "lucide-react"
-import { SectionFade } from "./SectionFade"
+import { SectionFade } from "./ui/SectionFade"
 
 
 const projects = [
@@ -50,12 +50,12 @@ export const ProjectsSection = () => {
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-5xl">
         <SectionFade animate="animate-fade-in-down" threshold={0.7}>
-          <h2 className="font[Poppins] text-4xl md:text-5xl font-semibold mb-6 text-center">
+          <h2 className="font[Poppins] text-4xl md:text-5xl font-semibold mb-20 text-center">
             Featured <span className="text-primary"> Projects</span>
           </h2>
 
           <p className="text-center mb-12 text-muted-foreground max-w-2xl mx-auto">
-            My most recent projects! 
+            {/* Add description for section if needed */} 
           </p>
         </SectionFade>
 
@@ -81,7 +81,7 @@ export const ProjectsSection = () => {
 
                     {/* WIP in different colour for PumpAI project */}
                     {project.title === "PumpAI" && (
-                      <span className="text-primary"> (WIP)</span>
+                      <span className="text-red-500"> (WIP)</span>
                     )}
                   </h3>
 

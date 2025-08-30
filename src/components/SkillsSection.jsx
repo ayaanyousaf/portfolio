@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { cn } from "../lib/utils";
-import { SectionFade } from "./SectionFade";
+import { SectionFade } from "./ui/SectionFade";
 
 
 const skills = [

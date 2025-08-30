@@ -1,7 +1,7 @@
-import { SectionFade } from "./SectionFade"
+import { SectionFade } from "./ui/SectionFade"
 import { cn } from "../lib/utils";
-import SpringFade from "./SpringFade";
-import SpringGrow from "./SpringGrow";
+import SpringFade from "./ui/SpringFade";
+import SpringGrow from "./ui/SpringGrow";
 
 // Data
 const schools = [

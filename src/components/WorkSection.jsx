@@ -1,4 +1,4 @@
-import { SectionFade } from "./SectionFade"
+import { SectionFade } from "./ui/SectionFade"
 
 export const WorkSection = () => {
     return (

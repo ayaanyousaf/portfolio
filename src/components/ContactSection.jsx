@@ -3,7 +3,8 @@ import { cn } from "../lib/utils"
 import { useRef } from "react"
 import emailjs from "emailjs-com"
 import { useToast } from "../hooks/use-toast"
-import { SectionFade } from "./SectionFade"
+import { SectionFade } from "./ui/SectionFade"
+import Earth from "./ui/Earth"
 
 
 export const ContactSection = () => {
@@ -52,7 +53,7 @@ export const ContactSection = () => {
         </SectionFade>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <SectionFade animate="animate-fade-in-right-slow" threshold={0.5}>
+          <SectionFade animate="animate-fade-in-right" threshold={0.5}>
             <div className="space-y-8">
               <h3 className="text-2xl font-semibold mb-6"> Contact Information</h3>
 
@@ -93,22 +94,16 @@ export const ContactSection = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="pt-8">
-                <h4 className="text-xl font-medium mb-4">Connect With Me! </h4>
-                <div className="flex space-x-4 items-center justify-center">
-                  <a href="https://linkedin.com/in/ayaanysf" target="_blank">
-                    <Linkedin size={30} className="hover:text-linkedin" />
-                  </a>
-                  <a href="https://instagram.com/ayaan.ysf4" target="_blank">
-                    <img src="/assets/Instagram.svg" alt="Instagram" className="w-10 h-10 transition object-contain"/>
-                  </a>
-                </div>
+            </div>
+            <div className="mt-6">
+              <div className="relative mx-auto w-full max-w-md sm:max-w-lg h-[18rem] md:h-[24rem]">
+                {/* Earth fills this box */}
+                <Earth className="absolute inset-0 w-full h-full" />
               </div>
             </div>
           </SectionFade>
 
-          <SectionFade animate="animate-fade-in-left-slow" threshold={0.5}>
+          <SectionFade animate="animate-fade-in-left" threshold={0.5}>
             <div className="bg-card p-8 rounded-lg shadow-xs">
               <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
