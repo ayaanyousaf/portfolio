@@ -16,11 +16,18 @@ export const ContactSection = () => {
   const sendEmail = (e) => {
     e.preventDefault()
 
+    /**
+     * Create a .env in your project root, then add values from your EmailJS account for these three variables:
+     * - VITE_EMAILJS_SERVICE_ID=your_service_id
+     * - VITE_EMAILJS_TEMPLATE_ID=your_template_id
+     * - VITE_EMAILJS_PUBLIC_KEY=your_public_key
+     * 
+     */
     emailjs.sendForm(
-      "AyaanYousafPortfolio", // Service ID
-      "MessageTemplate", // Template ID
+      import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID (set in .env for security)
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Template ID
       form.current,
-      "X2PTYWqtMmNy9riG9", // Public key
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY, // Public key
     ).then(
       (result) => {
         console.log("Success: ", result.text)
