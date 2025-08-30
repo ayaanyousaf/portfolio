@@ -14,8 +14,8 @@ export const Footer = () => {
             <Instagram size={30} className="hover:text-red-400 card-hover" />
           </a>
         </div>
-        <p className="text-xs md:text-sm text-muted-foreground">
-          © {new Date().getFullYear()} AyaanYousaf.ca. All rights reserved.
+        <p className="text-xs md:text-sm text-muted-foreground opacity-80">
+          © {new Date().getFullYear()} AyaanYousaf.ca.
         </p>
       </div>
       <a
