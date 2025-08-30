@@ -50,7 +50,7 @@ export const AboutSection = () => {
                   </div>
                   <div className="justify-self-center p-6">
                     <div className="grid grid-cols-2 items-center justify-center gap-4">
-                      <a href="https://linkedin.com/ayaanysf" 
+                      <a href="https://www.linkedin.com/in/ayaanysf" 
                           target="_blank"
                           className="flex justify-center items-center linkedin-gradient button-hover block rounded-lg p-4 w-30 text-sm font-semibold"
                       >
