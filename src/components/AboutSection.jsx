@@ -12,9 +12,9 @@ export const AboutSection = () => {
               </h2>
             </SectionFade>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-18 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[4.5rem] items-center">
               <SpringFade direction="right" distance={100} delay={0.2} className="order-2 md:order-1">
-                <div className="font-[Poppins] md:w-lg space-y-6">
+                <div className="font-[Poppins] md:max-w-lg space-y-6">
 
                   <p className="flex items-start text-lg text-muted-foreground">
                     <span className="shrink-0 pr-2 text-2xl">👨🏽‍💻</span>
@@ -45,7 +45,7 @@ export const AboutSection = () => {
               </SpringFade>
               <SpringFade direction="left" distance={100} delay={0.2} className="order-1 md:order-2">
                 <div className="grid grid-cols-1 gap-6">
-                  <div className="image-glow h-55 w-55 md:w-80 md:h-80 md:mb-2 rounded-full overflow-hidden mx-auto">
+                  <div className="image-glow h-56 w-56 md:w-80 md:h-80 md:mb-2 rounded-full overflow-hidden mx-auto">
                     <img src="/selfie.jpg" className="w-full h-full object-cover"/>
                   </div>
                   <div className="justify-self-center p-6">
@@ -59,7 +59,7 @@ export const AboutSection = () => {
 
                       <a href="https://github.com/ayaanyousaf" 
                           target="_blank"
-                          className="flex justify-center items-center github-gradient button-hover block rounded-lg p-4 w-30 text-sm font-semibold"
+                          className="flex justify-center items-center github-gradient button-hover block rounded-lg p-4 w-[7.5rem] text-sm font-semibold"
                       >
                         <Github className="mr-1" size={20} /> GitHub
                       </a>
