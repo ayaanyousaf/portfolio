@@ -1,5 +1,5 @@
 # Portfolio Website - Ayaan Yousaf
-<img src="public/splash.png" alt="Portfolio Preview" width="600">
+<img src="public/splash.png" alt="Portfolio Preview" width="1080">
 
 ## Overview
 A personal developer portfolio to showcase projects, skills, experience, and more! A modern and interactive web application built with React.js, Vite, Tailwind CSS, and Three.js. A stunning 3D space background, responsive design with smooth animations, and an interactive 3D Earth model.
