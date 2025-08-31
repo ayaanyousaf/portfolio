@@ -93,9 +93,10 @@ const Card = ({ school }) => {
 
         {/* Right content (mobile always, desktop conditional) */}
         <div className={cn("ml-8 md:ml-0 md:pl-8 w-full md:w-1/2")}>
-          <div className={cn(side === "right" ? "" : "md:hidden")}>
+          {/* Mobile Card for mobile specific animations */}
+          <div className="md:hidden">
             <SpringFade
-              direction={side === "right" ? "right" : "left"}
+              direction="left"
               delay={side === "right" ? 0.2 : 0.1}
               threshold={0.5}
             >
@@ -114,6 +115,31 @@ const Card = ({ school }) => {
               </div>
             </SpringFade>
           </div>
+          
+          {/* Desktop card for desktop specific animations */}
+          {side === "right" && (
+            <div className="hidden md:block">
+              <SpringFade
+                direction="right"
+                delay={side === "right" ? 0.2 : 0.1}
+                threshold={0.5}
+              >
+                <div
+                  className={cn(
+                    "relative gradient-border border-primary border-2 font-[Poppins] rounded-lg p-8 w-full"
+                  )}
+                >
+                  {/* Card Arrow (pointing left) */}
+                  <span
+                    className={cn(
+                      "absolute top-10 arrow-left -left-[1rem]"
+                    )}
+                  />
+                  <CardText school={school} />
+                </div>
+              </SpringFade>
+            </div>
+          )}
         </div>
       </div>
     </div>
