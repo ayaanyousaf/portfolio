@@ -1,6 +1,6 @@
 import { Linkedin, Mail, MapPin, MessageCircle, Phone, Send, User } from "lucide-react"
 import { cn } from "../lib/utils"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import emailjs from "emailjs-com"
 import { useToast } from "../hooks/use-toast"
 import { SectionFade } from "./ui/SectionFade"
@@ -11,10 +11,19 @@ export const ContactSection = () => {
   const { toast } = useToast()
 
   // EmailJS integration for Contact Form API
-  const form = useRef(null); 
+  const form = useRef(null)
 
+
+  const [isSending, setIsSending] = useState(false);  // Checks if a message is currently being sent
   const sendEmail = (e) => {
     e.preventDefault()
+
+    // Prevents double clicks and spam
+    if (isSending) {
+      return
+    }
+
+    setIsSending(true)
 
     /**
      * Create a .env in your project root, then add values from your EmailJS account for these three variables:
@@ -23,11 +32,12 @@ export const ContactSection = () => {
      * - VITE_EMAILJS_PUBLIC_KEY=your_public_key
      * 
      */
-    emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID (set in .env for security)
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Template ID
-      form.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY, // Public key
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID (set in .env for security)
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Template ID
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY, // Public key
     ).then(
       (result) => {
         console.log("Success: ", result.text)
@@ -38,12 +48,14 @@ export const ContactSection = () => {
         });
 
         form.current.reset()
-      },
-      (error) => {
+      })
+      .catch((error) => {
         console.error("Error: ", error.text)
         alert("Failed to send message. Try again later.")
-      }
-    )
+      })
+      .finally(() => {
+        setIsSending(false); 
+      })
   }
 
   return (
@@ -151,11 +163,11 @@ export const ContactSection = () => {
                 </div>
                 <button type="submit" className={cn(
                     "cosmic-button cursor-pointer w-full flex items-center justify-center gap-2",
-
+                    isSending ? "bg-primary/20" : "bg-primary"
                   )}
                 >
-                  Send Message
-                  <Send size={16} />
+                  {isSending ? "Sending..." : "Send Message"}
+                  <Send size={16} className={cn(isSending ? "hidden" : "block")} />
                 </button>
               </form>
             </div>
