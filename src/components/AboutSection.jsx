@@ -1,6 +1,7 @@
 import { FileUser, Github, Linkedin } from "lucide-react"
 import { SectionFade } from "./ui/SectionFade"
 import SpringFade from "./ui/SpringFade"
+import { track } from "@vercel/analytics"
 
 export const AboutSection = () => {
     return (
@@ -53,6 +54,7 @@ export const AboutSection = () => {
                       <a href="https://www.linkedin.com/in/ayaanysf" 
                           target="_blank"
                           className="flex justify-center items-center linkedin-gradient button-hover block rounded-lg p-4 w-30 text-sm font-semibold"
+                          onClick={() => track("LinkedIn Clicked")}
                       >
                         <Linkedin className="mr-1" size={20} /> LinkedIn
                       </a>
@@ -60,6 +62,7 @@ export const AboutSection = () => {
                       <a href="https://github.com/ayaanyousaf" 
                           target="_blank"
                           className="flex justify-center items-center github-gradient button-hover block rounded-lg p-4 w-[7.5rem] text-sm font-semibold"
+                          onClick={() => track("GitHub Clicked")}
                       >
                         <Github className="mr-1" size={20} /> GitHub
                       </a>
@@ -67,6 +70,7 @@ export const AboutSection = () => {
                       <a href="/AyaanYousaf_Resume.pdf" 
                           target="_blank"
                           className="col-span-2 flex justify-center justify-self-center items-center resume-gradient button-hover block rounded-lg p-4 w-30 text-sm font-semibold"
+                          onClick={() => track("Resume Clicked")}
                       >
                         <FileUser className="mr-1" size={20} /> Resume
                       </a>

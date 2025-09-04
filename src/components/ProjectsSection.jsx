@@ -1,5 +1,6 @@
 import { ArrowRight, ExternalLink, Github, Tag } from "lucide-react"
 import { SectionFade } from "./ui/SectionFade"
+import { track } from "@vercel/analytics"
 
 
 const projects = [
@@ -92,6 +93,7 @@ export const ProjectsSection = () => {
                   <a href={project.githubURL} 
                     target="_blank" 
                     className="github-gradient rounded-full mt-auto mx-auto w-11 h-11 inline-flex justify-center justify-self-center items-center text-foreground/80 hover:text-primary transition-colors duration-300"
+                    onClick={() => track(`${project.title} GitHub Clicked`)}
                   > 
                     <Github size={30} />
                   </a>
@@ -102,7 +104,11 @@ export const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a className="transparent-button w-fit flex items-center mx-auto gap-2" href="https://github.com/ayaanyousaf" target="_blank">
+          <a className="transparent-button w-fit flex items-center mx-auto gap-2" 
+             href="https://github.com/ayaanyousaf" 
+             target="_blank"
+             onClick={() => track("GitHub Clicked in Projects")}
+          >
             Check My GitHub <ArrowRight size={16}/>
           </a>
         </div>
