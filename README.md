@@ -1,4 +1,4 @@
-# Portfolio Website - Ayaan Yousaf
+# 3D Portfolio Website
 <img src="public/splash.png" alt="Portfolio Preview" width="1080">
 
 ## Overview
