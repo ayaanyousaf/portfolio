@@ -229,6 +229,10 @@
   text-align: center;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 html {
   overscroll-behavior-y: none;
 }
