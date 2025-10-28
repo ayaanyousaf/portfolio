@@ -1,50 +1,71 @@
-import { ArrowRight, ExternalLink, Github, Tag } from "lucide-react"
-import { SectionFade } from "./ui/SectionFade"
-import { track } from "@vercel/analytics"
-
+import { ArrowRight, ExternalLink, Github, Tag, Youtube } from "lucide-react";
+import { SectionFade } from "./ui/SectionFade";
+import { track } from "@vercel/analytics";
 
 const projects = [
   {
     id: 1,
-    title: "BookNest", 
-    description: "A digital library platform built using Vue.js, Node.js, Express, and MongoDB. View, save, and rate books of all genres. Filter by author, genre, and more.",
-    image: "/projects/BookNest.png",
-    tags: ["Vue.js", "JavaScript", "Tailwind CSS", "Node.js", "D3.js", "Express", "MongoDB"],
-    githubURL: "https://github.com/6lvcknight/WebDev"
+    title: "DRL Framework for Software Testing",
+    description:
+      "A modular deep reinforcement learning framework that automates software testing. Train agents with different reward designs to explore and interact with apps to identify bugs.",
+    image: "/projects/DRL_Demo.gif",
+    tags: ["Python", "Stable Baselines3", "Gymnasium", "Selenium", "Jupyter"],
+    githubURL: "https://github.com/ayaanyousaf/drl-testing-framework",
   },
   {
     id: 2,
-    title: "Tic-Tac-Chat", 
-    description: "A web server platform that allows you to chat and play tic tac toe with others in real time.",
-    image: "/projects/Tic-Tac-Chat_2.png",
-    tags: ["Java", "JavaScript", "HTML/CSS", "RESTful APIs"],
-    githubURL: "https://github.com/ayaanyousaf/tic-tac-chat"
+    title: "BookNest",
+    description:
+      "A digital library platform built using Vue.js, Node.js, Express, and MongoDB. View, save, and rate books of all genres. Filter by author, genre, and more.",
+    image: "/projects/BookNest.png",
+    tags: [
+      "Vue.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Node.js",
+      "D3.js",
+      "Express",
+      "MongoDB",
+    ],
+    githubURL: "https://github.com/6lvcknight/WebDev",
   },
   {
     id: 3,
-    title: "ByeSpam", 
-    description: "An application designed to accurately and efficiently identify spam emails in your inbox. Achieved 88% accuracy and 84% precision.",
-    image: "/projects/ByeSpam.png",
+    title: "Tic-Tac-Chat",
+    description:
+      "A web server platform that allows you to chat and play tic tac toe with others in real time.",
+    image: "/projects/Tic-Tac-Chat_2.png",
     tags: ["Java", "JavaScript", "HTML/CSS", "RESTful APIs"],
-    githubURL: "https://github.com/ayaanyousaf/"
+    githubURL: "https://github.com/ayaanyousaf/tic-tac-chat",
   },
   {
     id: 4,
-    title: "Anime Filler Tracker", 
-    description: "A Python web scraping application built using Beautiful Soup. Search for any anime and instantly view the episode name and number of all filler episodes for it.",
+    title: "ByeSpam",
+    description:
+      "An application designed to accurately and efficiently identify spam emails in your inbox. Achieved 88% accuracy and 84% precision.",
+    image: "/projects/ByeSpam.png",
+    tags: ["Java", "JavaScript", "HTML/CSS", "RESTful APIs"],
+    githubURL: "https://github.com/ayaanyousaf/",
+  },
+  {
+    id: 5,
+    title: "Anime Filler Tracker",
+    description:
+      "A Python web scraping application built using Beautiful Soup. Search for any anime and instantly view the episode name and number of all filler episodes for it.",
     image: "/projects/anime_filler_tracker.gif",
     tags: ["Python", "Beautiful Soup", "Tkinter", "Web Scraping"],
     githubURL: "https://github.com/ayaanyousaf/anime-filler-tracker",
   },
   {
-    id: 5,
-    title: "PumpAI", 
-    description: "An AI-powered fitness tracker for weightlifters. Log workouts, nutrition, and get AI recommendations based on your habits.",
+    id: 6,
+    title: "PumpAI",
+    description:
+      "An AI-powered fitness tracker for weightlifters. Log workouts, nutrition, and get AI recommendations based on your habits.",
     image: "/projects/PumpAI-WIP.png",
     tags: ["React.js", "TypeScript", "Tailwind CSS", "Node.js"],
-    githubURL: "https://github.com/ayaanyousaf/PumpAI"
+    githubURL: "https://github.com/ayaanyousaf/PumpAI",
   },
-]
+];
 
 export const ProjectsSection = () => {
   return (
@@ -56,16 +77,23 @@ export const ProjectsSection = () => {
           </h2>
 
           <p className="text-center mb-12 text-muted-foreground max-w-2xl mx-auto">
-            {/* Add description for section if needed */} 
+            {/* Add description for section if needed */}
           </p>
         </SectionFade>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
             <SectionFade animate="animate-fade-in-up" threshold={0.3}>
-              <div key={key} className="group relative bg-card rounded-lg overflow-hidden h-full flex flex-col shadow-xs card-hover">
+              <div
+                key={key}
+                className="group relative bg-card rounded-lg overflow-hidden h-full flex flex-col shadow-xs card-hover"
+              >
                 <div className="h-48 overflow-hidden">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
@@ -76,7 +104,7 @@ export const ProjectsSection = () => {
                       </span>
                     ))}
                   </div>
-                
+
                   <h3 className="text-xl font-semibold mb-1">
                     {project.title}
 
@@ -89,14 +117,37 @@ export const ProjectsSection = () => {
                   <p className="text-muted-foreground text-sm mb-14">
                     {project.description}
                   </p>
-                
-                  <a href={project.githubURL} 
-                    target="_blank" 
-                    className="github-gradient rounded-full mt-auto mx-auto w-11 h-11 inline-flex justify-center justify-self-center items-center text-foreground/80 hover:text-primary transition-colors duration-300"
-                    onClick={() => track(`${project.title} GitHub Clicked`)}
-                  > 
-                    <Github size={30} />
-                  </a>
+                  {project.title === "DRL Framework for Software Testing" ? (
+                    <div className="mt-auto flex gap-4">
+                      <a
+                        href="https://youtu.be/1MSFtFpwVgA"
+                        target="_blank"
+                        className="github-gradient rounded-full ml-auto w-11 h-11 inline-flex justify-center justify-self-center items-center text-foreground/80 hover:text-red-500 transition-colors duration-300"
+                        onClick={() =>
+                          track(`${project.title} YouTube Clicked`)
+                        }
+                      >
+                        <Youtube size={30} />
+                      </a>
+                      <a
+                        href={project.githubURL}
+                        target="_blank"
+                        className="github-gradient rounded-full mr-auto w-11 h-11 inline-flex justify-center justify-self-center items-center text-foreground/80 hover:text-primary transition-colors duration-300"
+                        onClick={() => track(`${project.title} GitHub Clicked`)}
+                      >
+                        <Github size={30} />
+                      </a>
+                    </div>
+                  ) : (
+                    <a
+                      href={project.githubURL}
+                      target="_blank"
+                      className="github-gradient rounded-full mt-auto mx-auto w-11 h-11 inline-flex justify-center justify-self-center items-center text-foreground/80 hover:text-primary transition-colors duration-300"
+                      onClick={() => track(`${project.title} GitHub Clicked`)}
+                    >
+                      <Github size={30} />
+                    </a>
+                  )}
                 </div>
               </div>
             </SectionFade>
@@ -104,16 +155,16 @@ export const ProjectsSection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a className="transparent-button w-fit flex items-center mx-auto gap-2" 
-             href="https://github.com/ayaanyousaf" 
-             target="_blank"
-             onClick={() => track("GitHub Clicked in Projects")}
+          <a
+            className="transparent-button w-fit flex items-center mx-auto gap-2"
+            href="https://github.com/ayaanyousaf"
+            target="_blank"
+            onClick={() => track("GitHub Clicked in Projects")}
           >
-            Check My GitHub <ArrowRight size={16}/>
+            Check My GitHub <ArrowRight size={16} />
           </a>
         </div>
-
       </div>
     </section>
-  )
-}
+  );
+};
