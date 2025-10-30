@@ -7,7 +7,7 @@ const projects = [
     id: 1,
     title: "DRL Framework for Software Testing",
     description:
-      "A modular deep reinforcement learning framework that automates software testing. Train agents with different reward designs to explore and interact with apps to identify bugs.",
+      "A modular Deep Reinforcement Learning framework that automates software testing. Train agents with different reward designs to explore and interact with apps to identify bugs.",
     image: "/projects/DRL_Demo.gif",
     tags: ["Python", "Stable Baselines3", "Gymnasium", "Selenium", "Jupyter"],
     githubURL: "https://github.com/ayaanyousaf/drl-testing-framework",
