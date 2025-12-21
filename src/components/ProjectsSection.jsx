@@ -11,9 +11,27 @@ const projects = [
     image: "/projects/DRL_Demo.gif",
     tags: ["Python", "Stable Baselines3", "Gymnasium", "Selenium", "Jupyter"],
     githubURL: "https://github.com/ayaanyousaf/drl-testing-framework",
+    videoURL: "https://youtu.be/1MSFtFpwVgA",
   },
   {
     id: 2,
+    title: "PatchGen - AI Game Patch Note Generator",
+    description:
+      "An LLM-powered web application that converts raw updates for video games into clean, structured, professional developer patch notes.",
+    image: "/projects/PatchGen.gif",
+    tags: [
+      "HTML",
+      "Tailwind CSS",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "Google Gemini API",
+    ],
+    githubURL: "https://github.com/ayaanyousaf/patch-gen",
+    videoURL: "https://youtu.be/1Xs7qCIkZpw?si=vvb628UDZXy9-0As",
+  },
+  {
+    id: 3,
     title: "BookNest",
     description:
       "A digital library platform built using Vue.js, Node.js, Express, and MongoDB. View, save, and rate books of all genres. Filter by author, genre, and more.",
@@ -30,7 +48,7 @@ const projects = [
     githubURL: "https://github.com/6lvcknight/WebDev",
   },
   {
-    id: 3,
+    id: 4,
     title: "Tic-Tac-Chat",
     description:
       "A web server platform that allows you to chat and play tic tac toe with others in real time.",
@@ -39,22 +57,13 @@ const projects = [
     githubURL: "https://github.com/ayaanyousaf/tic-tac-chat",
   },
   {
-    id: 4,
+    id: 5,
     title: "ByeSpam",
     description:
       "An application designed to accurately and efficiently identify spam emails in your inbox. Achieved 88% accuracy and 84% precision.",
     image: "/projects/ByeSpam.png",
     tags: ["Java", "JavaScript", "HTML/CSS", "RESTful APIs"],
     githubURL: "https://github.com/ayaanyousaf/",
-  },
-  {
-    id: 5,
-    title: "Anime Filler Tracker",
-    description:
-      "A Python web scraping application built using Beautiful Soup. Search for any anime and instantly view the episode name and number of all filler episodes for it.",
-    image: "/projects/anime_filler_tracker.gif",
-    tags: ["Python", "Beautiful Soup", "Tkinter", "Web Scraping"],
-    githubURL: "https://github.com/ayaanyousaf/anime-filler-tracker",
   },
   {
     id: 6,
@@ -117,10 +126,12 @@ export const ProjectsSection = () => {
                   <p className="text-muted-foreground text-sm mb-14">
                     {project.description}
                   </p>
-                  {project.title === "DRL Framework for Software Testing" ? (
+                  {project.title === "DRL Framework for Software Testing" ||
+                  project.title ===
+                    "PatchGen - AI Game Patch Note Generator" ? (
                     <div className="mt-auto flex gap-4">
                       <a
-                        href="https://youtu.be/1MSFtFpwVgA"
+                        href={project.videoURL}
                         target="_blank"
                         className="github-gradient rounded-full ml-auto w-11 h-11 inline-flex justify-center justify-self-center items-center text-foreground/80 hover:text-red-500 transition-colors duration-300"
                         onClick={() =>
