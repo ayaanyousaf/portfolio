@@ -75,7 +75,7 @@ const projects = [
     id: 6,
     title: "ByeSpam",
     description:
-      "An application designed to accurately and efficiently identify spam emails in your inbox. Achieved 88% accuracy and 84% precision.",
+      "A machine learning-based spam email classifier developed using logistic regression in Java, achieving 88% accuracy. Features a simple interface for displaying results in real-time.",
     image: "/projects/ByeSpam.png",
     tags: ["Java", "JavaScript", "HTML/CSS", "RESTful APIs"],
     githubURL: "https://github.com/ayaanyousaf/",
