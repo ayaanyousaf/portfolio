@@ -5,6 +5,21 @@ import { track } from "@vercel/analytics";
 const projects = [
   {
     id: 1,
+    title: "Plagued Abyss",
+    description:
+      "A 2D survival shooter game built in Godot Engine. Features wave-based enemy spawning, dynamic upgrade systems, and progressive difficulty that encourages strategic decision-making.",
+    image: "/projects/Plagued_Abyss.png",
+    tags: [
+      "Godot",
+      "Game Systems Design",
+      "Object-Oriented Programming",
+      "Gameplay Programming",
+    ],
+    githubURL: "https://github.com/ayaanyousaf/plagued-abyss",
+    videoURL: "https://youtu.be/mvnx856TFW8?si=nuDfpZ704KnzGffW",
+  },
+  {
+    id: 2,
     title: "DRL Framework for Software Testing",
     description:
       "A modular Deep Reinforcement Learning framework that automates software testing. Train agents with different reward designs to explore and interact with apps to identify bugs.",
@@ -14,7 +29,7 @@ const projects = [
     videoURL: "https://youtu.be/1MSFtFpwVgA",
   },
   {
-    id: 2,
+    id: 3,
     title: "PatchGen - AI Game Patch Note Generator",
     description:
       "An LLM-powered web application that converts raw updates for video games into clean, structured, professional developer patch notes.",
@@ -31,7 +46,7 @@ const projects = [
     videoURL: "https://youtu.be/1Xs7qCIkZpw?si=vvb628UDZXy9-0As",
   },
   {
-    id: 3,
+    id: 4,
     title: "BookNest",
     description:
       "A digital library platform built using Vue.js, Node.js, Express, and MongoDB. View, save, and rate books of all genres. Filter by author, genre, and more.",
@@ -48,7 +63,7 @@ const projects = [
     githubURL: "https://github.com/6lvcknight/WebDev",
   },
   {
-    id: 4,
+    id: 5,
     title: "Tic-Tac-Chat",
     description:
       "A web server platform that allows you to chat and play tic tac toe with others in real time.",
@@ -57,22 +72,13 @@ const projects = [
     githubURL: "https://github.com/ayaanyousaf/tic-tac-chat",
   },
   {
-    id: 5,
+    id: 6,
     title: "ByeSpam",
     description:
       "An application designed to accurately and efficiently identify spam emails in your inbox. Achieved 88% accuracy and 84% precision.",
     image: "/projects/ByeSpam.png",
     tags: ["Java", "JavaScript", "HTML/CSS", "RESTful APIs"],
     githubURL: "https://github.com/ayaanyousaf/",
-  },
-  {
-    id: 6,
-    title: "PumpAI",
-    description:
-      "An AI-powered fitness tracker for weightlifters. Log workouts, nutrition, and get AI recommendations based on your habits.",
-    image: "/projects/PumpAI-WIP.png",
-    tags: ["React.js", "TypeScript", "Tailwind CSS", "Node.js"],
-    githubURL: "https://github.com/ayaanyousaf/PumpAI",
   },
 ];
 
@@ -116,19 +122,15 @@ export const ProjectsSection = () => {
 
                   <h3 className="text-xl font-semibold mb-1">
                     {project.title}
-
-                    {/* WIP in different colour for PumpAI project */}
-                    {project.title === "PumpAI" && (
-                      <span className="text-red-500"> (WIP)</span>
-                    )}
                   </h3>
 
                   <p className="text-muted-foreground text-sm mb-14">
                     {project.description}
                   </p>
+                  {/* Demo video links for specific projects */}
                   {project.title === "DRL Framework for Software Testing" ||
-                  project.title ===
-                    "PatchGen - AI Game Patch Note Generator" ? (
+                  project.title === "PatchGen - AI Game Patch Note Generator" ||
+                  project.title === "Plagued Abyss" ? (
                     <div className="mt-auto flex gap-4">
                       <a
                         href={project.videoURL}
